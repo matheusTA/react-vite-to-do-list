@@ -1,10 +1,11 @@
 import Header from '../../components/Header';
+import Input from '../../components/Input';
 
 function Home() {
   return (
     <>
       <Header />
-      <h1>Home</h1>
+      <Input />
     </>
   );
 }
