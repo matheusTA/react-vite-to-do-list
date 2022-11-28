@@ -1,15 +1,15 @@
-import { Container, Title, Badge } from './styles';
+import { Container, Text, Badge } from './styles';
 
 function ListInformation() {
   return (
     <Container>
-      <Title type="TotalTasks">
+      <Text type="TotalTasks">
         Tarefas criadas <Badge>0</Badge>
-      </Title>
+      </Text>
 
-      <Title type="FinishedTasks">
+      <Text type="FinishedTasks">
         Concluídas <Badge>2 de 5</Badge>
-      </Title>
+      </Text>
     </Container>
   );
 }

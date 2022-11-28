@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface TitleType {
+interface TextType {
   type: 'TotalTasks' | 'FinishedTasks';
 }
 
@@ -19,7 +19,7 @@ export const Badge = styled.span`
   border-radius: 62.438rem;
 `;
 
-export const Title = styled.p<TitleType>`
+export const Text = styled.p<TextType>`
   display: flex;
   justify-content: center;
   align-items: center;
