@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   max-width: 46rem;
-  margin-top: -1.625rem;
+  margin-top: -1.8rem;
   margin-left: auto;
   margin-right: auto;
 `;
