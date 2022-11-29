@@ -26,6 +26,5 @@ export const Text = styled.p<TextType>`
   column-gap: 0.5rem;
   color: ${({ type }) =>
     type === 'TotalTasks' ? 'var(--blue-400)' : 'var(--purple-400)'};
-  font-family: 'Inter';
   font-weight: 700;
 `;

@@ -22,7 +22,6 @@ export const Title = styled.span`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter';
   color: var(--gray-300);
   font-weight: 400;
   line-height: 140%;

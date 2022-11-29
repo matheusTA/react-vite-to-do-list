@@ -8,7 +8,6 @@ export const Container = styled.div`
 
 export const InputText = styled.input`
   flex: 1;
-  font-family: 'Inter';
   font-size: 1rem;
   padding: 1rem;
   color: var(--gray-300);
@@ -19,7 +18,6 @@ export const InputText = styled.input`
 `;
 
 export const Button = styled.button`
-  font-family: 'Inter';
   font-size: 0.875rem;
   background-color: var(--blue-900);
   color: var(--white);
