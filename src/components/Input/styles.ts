@@ -12,9 +12,9 @@ export const InputText = styled.input`
   font-size: 1rem;
   padding: 1rem;
   color: var(--gray-300);
-  border: 1px solid var(--gray-700);
+  border: 0.063rem solid var(--gray-700);
   background-color: var(--gray-500);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   outline: none;
 `;
 
@@ -25,7 +25,7 @@ export const Button = styled.button`
   color: var(--white);
   padding: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
