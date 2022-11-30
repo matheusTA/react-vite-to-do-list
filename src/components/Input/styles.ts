@@ -15,6 +15,10 @@ export const InputText = styled.input`
   background-color: var(--gray-500);
   border-radius: 0.5rem;
   outline: none;
+
+  :focus {
+    color: var(--gray-100);
+  }
 `;
 
 export const Button = styled.button`

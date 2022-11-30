@@ -23,6 +23,8 @@ export const Item = styled.div`
 
 export const Title = styled.p`
   flex: 1;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--gray-100);
   text-decoration-line: line-through;
 `;
