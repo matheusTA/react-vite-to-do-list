@@ -29,7 +29,6 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   column-gap: 0.5rem;
-  cursor: pointer;
 
   :hover {
     background-color: var(--blue-400);
