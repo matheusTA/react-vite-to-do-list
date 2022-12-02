@@ -1,40 +1,23 @@
 import Header from '../../components/Header';
-import Input from '../../components/Input';
+import Input from './components/Input';
+import { useToDo } from '../../contexts/toDo';
 import EmptyList from './components/EmptyList';
 import ListInformation from './components/ListInformation';
-import ListItem, { ToDo } from './components/ListItem';
+import ListItem from './components/ListItem';
 import { Container, Content } from './styles';
 
-const toDoList: ToDo[] = [
-  {
-    isCheck: true,
-    content: 'Coffe',
-  },
-  {
-    isCheck: false,
-    content:
-      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel .',
-  },
-  {
-    isCheck: false,
-    content: 'CS',
-  },
-  {
-    isCheck: true,
-    content:
-      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
-  },
-];
-
 function Home() {
+  const { data } = useToDo();
+  const toDoListIsEmpty = data.length === 0;
+
   return (
     <Container>
       <Header />
       <Content>
         <Input />
         <ListInformation />
-        {/* <EmptyList /> */}
-        <ListItem list={toDoList} />
+
+        {toDoListIsEmpty ? <EmptyList /> : <ListItem />}
       </Content>
     </Container>
   );

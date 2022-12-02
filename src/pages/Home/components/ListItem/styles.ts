@@ -21,12 +21,12 @@ export const Item = styled.div`
   border-radius: 0.5rem;
 `;
 
-export const Title = styled.p`
+export const Title = styled.p<StyleProps>`
   flex: 1;
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--gray-100);
-  text-decoration-line: line-through;
+  text-decoration-line: ${({ isCheck }) => (isCheck ? 'line-through' : 'none')};
 `;
 
 export const CheckButton = styled.button<StyleProps>`

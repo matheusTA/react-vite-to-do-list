@@ -1,19 +1,13 @@
 import { Circle, Trash, CheckCircle } from 'phosphor-react';
+import { useToDo } from '../../../../contexts/toDo';
 import { CheckButton, Container, DeleteButton, Item, Title } from './styles';
 
-export interface ToDo {
-  isCheck: boolean;
-  content: string;
-}
+function ListItem() {
+  const { data, removeToDo } = useToDo();
 
-interface ListInformationProps {
-  list: ToDo[];
-}
-
-function ListItem({ list }: ListInformationProps) {
   return (
     <Container>
-      {list.map(({ isCheck, content }) => (
+      {data.map(({ isCheck, content }) => (
         <Item key={content}>
           <CheckButton isCheck={isCheck}>
             {isCheck ? (
@@ -23,9 +17,12 @@ function ListItem({ list }: ListInformationProps) {
             )}
           </CheckButton>
 
-          <Title>{content}</Title>
+          <Title isCheck={isCheck}>{content}</Title>
 
-          <DeleteButton>
+          <DeleteButton
+            type="button"
+            onClick={() => removeToDo({ content, isCheck })}
+          >
             <Trash size={24} />
           </DeleteButton>
         </Item>
