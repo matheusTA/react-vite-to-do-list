@@ -3,13 +3,17 @@ import { useToDo } from '../../../../contexts/toDo';
 import { CheckButton, Container, DeleteButton, Item, Title } from './styles';
 
 function ListItem() {
-  const { data, removeToDo } = useToDo();
+  const { data, removeToDo, markAsDone } = useToDo();
 
   return (
     <Container>
       {data.map(({ isCheck, content }) => (
         <Item key={content}>
-          <CheckButton isCheck={isCheck}>
+          <CheckButton
+            isCheck={isCheck}
+            type="button"
+            onClick={() => markAsDone({ content, isCheck })}
+          >
             {isCheck ? (
               <CheckCircle size={24} weight="fill" />
             ) : (
