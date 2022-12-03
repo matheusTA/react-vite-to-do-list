@@ -1,10 +1,13 @@
 import Header from '../../components/Header';
+import { Container } from './styles';
 
 function NotFound() {
   return (
     <>
       <Header />
-      <h1>Not Found</h1>
+      <Container>
+        <h1>404</h1>
+      </Container>
     </>
   );
 }

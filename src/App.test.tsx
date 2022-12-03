@@ -11,11 +11,7 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(
-      screen.getByRole('heading', {
-        level: 1,
-      })
-    ).toHaveTextContent('Home');
+    expect(screen.getByRole('button')).toHaveTextContent('Criar');
   });
 
   it('should render Not Fount page', () => {
@@ -29,6 +25,6 @@ describe('App', () => {
       screen.getByRole('heading', {
         level: 1,
       })
-    ).toHaveTextContent('Not Found');
+    ).toHaveTextContent('404');
   });
 });
